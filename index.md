@@ -5,7 +5,7 @@
 ###   My next stop is studying at John Hopkins University Laboratory for Computational Sensing + Robotics to finish my MSE in Robotics.
     
 ## Resume 我的简历
-- [点击这里查看我的简历](Qing_Yan_-_Resume.pdf)
+- [点击这里查看我的简历](Resume.pdf)
 
 ## Videos 项目视频
 - [2024 UW ENGINE Cpastone Project](https://youtu.be/KzpJeC7L7hM)
