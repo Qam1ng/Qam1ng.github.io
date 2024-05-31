@@ -4,10 +4,9 @@
 ###   During my undergraduate study, I was a research associate at UW Sensors, Energy, and Automation Laboratory directed by Prof. Alexander Mamishev.
 ###   My next stop is studying at John Hopkins University Laboratory for Computational Sensing + Robotics to finish my MSE in Robotics.
     
-## 我的作品
-- [作品1](link_to_your_work1)
-- [作品2](link_to_your_work2)
+## Resume 我的简历
+- [点击这里查看我的简历](resume.pdf)
 
-## Videos
-- [Youtube](https://youtu.be/KzpJeC7L7hM)
-- [Bilibili](link_to_your_video2)
+## Videos 项目视频
+- [2024 UW ENGINE Cpastone Project](https://youtu.be/KzpJeC7L7hM)
+- [My undergrad course projects](https://youtu.be/1jFw59NL1z8)
