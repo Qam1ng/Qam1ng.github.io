@@ -10,8 +10,7 @@
 - It aims to detect the weak signal change when the meteorite events happen.
 
 #### Fruit Ripeness Project - SEAL
-- The Fruit Ripeness Project aims to develop an innovative sensor that detects changes in fruit skin impedance, providing an accurate measure of fruit ripeness.
-- [LINK](https://www.uwseal.org/project-showcase/)
+- The Fruit Ripeness Project aims to develop an innovative sensor that detects changes in fruit skin impedance, providing an accurate measure of fruit ripeness. [LINK](https://www.uwseal.org/project-showcase/)
     
 ## My Resume 我的简历
 - [View my resume](Resume.pdf)
