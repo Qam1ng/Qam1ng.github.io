@@ -1,4 +1,4 @@
-#   Qing Yan
+#   Graduate Student at John Hopkins University in MSE. Robotics
 
 ###   I am an Electrical and Computer Engineering senior at University of Washington, Seattle. 
 ###   During my undergraduate study, I was a research associate at UW Sensors, Energy, and Automation Laboratory directed by Prof. Alexander Mamishev.
