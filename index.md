@@ -21,7 +21,7 @@
 </figure>   
 
 #### Autonomous Self-Driving Wheelchair sponsored by Cyberworks Robotics Inc. (2024 UW ENGINE Cpastone Project)
-- Developed a robust and persistent autonomous navigation system for power wheelchairs that is affordable for mass adoption.
+- The project aims to develop a robust and persistent autonomous navigation system for power wheelchairs that is affordable for mass adoption.
 
 <figure class="third">
     <img src="images/wheelchair.jpg" width="200" height="300" alt="AltText" />
