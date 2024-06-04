@@ -18,6 +18,20 @@
   
 <figure class="third">
     <img src="images/fruit sensor.jpg" width="200" height="300" alt="AltText" />
+</figure>   
+
+#### Autonomous Self-Driving Wheelchair sponsored by Cyberworks Robotics Inc. (2024 UW ENGINE Cpastone Project)
+- Developed a robust and persistent autonomous navigation system for power wheelchairs that is affordable for mass adoption.
+
+<figure class="third">
+    <img src="images/wheelchair.jpg" width="200" height="300" alt="AltText" />
+</figure>   
+
+#### Undergraduate Course Projects
+- Covering Control System Analysis, Dynamic Analysis, PID Control, Machine Learning, etc
+
+<figure class="third">
+    <img src="images/freenove car.jpg" width="200" height="300" alt="AltText" /><img src="images/arms.png" width="300" height="200" alt="AltText" />
 </figure>
     
 ## My Resume 我的简历
@@ -26,13 +40,4 @@
 
 ## Project Videos 项目视频
 - [2024 UW ENGINE Cpastone Project](https://youtu.be/KzpJeC7L7hM)
-  
-<figure class="third">
-    <img src="images/wheelchair.jpg" width="200" height="300" alt="AltText" />
-</figure>
-
 - [My undergrad course projects](https://youtu.be/1jFw59NL1z8)
-  
-<figure class="third">
-    <img src="images/freenove car.jpg" width="200" height="300" alt="AltText" /><img src="images/arms.png" width="300" height="200" alt="AltText" />
-</figure>
