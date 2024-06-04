@@ -8,7 +8,8 @@
 #### Embedded Antenna Signals Project - SEAL
 - A project to design the signal-receiving module for the Heimdall ACU's antenna system to detect weak electromagnetic interference.
 - It aims to detect the weak signal change when the meteorite events happen.
-- ![Weak Electromagnetic Interference Detector](https://github.com/Qam1ng/Qam1ng.github.io.git/antenna.png)
+![image](https://github.com/Qam1ng/Qam1ng.github.io.git/blob/main/antenna.png)
+
 
 #### Fruit Ripeness Project - SEAL
 - The Fruit Ripeness Project aims to develop an innovative sensor that detects changes in fruit skin impedance, providing an accurate measure of fruit ripeness. [LINK](https://www.uwseal.org/project-showcase/)
