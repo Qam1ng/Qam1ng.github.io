@@ -1,4 +1,8 @@
-# Qing Yan 严青
+<p align="center">
+  <img src="images/profile.jpg" alt="Qing Yan" width="180" style="border-radius:50%; object-fit:cover;" />
+</p>
+
+# Qing Yan 颜青
 
 **M.S.E. Robotics @ Johns Hopkins University** &nbsp;·&nbsp; B.S. ECE @ University of Washington
 
@@ -23,10 +27,6 @@ I earned my B.S. in Electrical & Computer Engineering at the University of Washi
 **GUIDES: Guidance Using Instructor-Distilled Embeddings for Pretrained Robot Policy Enhancement.**
 Gao, M., **Yan, Q.**, & Li, X. *IEEE International Conference on Robotics and Automation (ICRA), 2026.*
 [arXiv:2511.03400](https://arxiv.org/abs/2511.03400)
-
-**Scouting by Reward: VLM-to-IRL-Driven Player Selection for Esports.**
-Yang, W., & **Yan, Q.** *MIT Sloan Sports Analytics Conference, 2026 (under review).*
-[arXiv:2604.14474](https://arxiv.org/abs/2604.14474)
 
 ---
 
