@@ -28,6 +28,10 @@ I earned my B.S. in Electrical & Computer Engineering at the University of Washi
 Gao, M., **Yan, Q.**, & Li, X. *IEEE International Conference on Robotics and Automation (ICRA), 2026.*
 [arXiv:2511.03400](https://arxiv.org/abs/2511.03400)
 
+**Scouting by Reward: VLM-to-IRL-Driven Player Selection for Esports.**
+Yang, W., & **Yan, Q.** *Preprint, 2026.*
+[arXiv:2604.14474](https://arxiv.org/abs/2604.14474)
+
 ---
 
 ## Research & Projects
