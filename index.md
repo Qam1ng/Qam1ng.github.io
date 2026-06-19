@@ -58,10 +58,9 @@ Designed the signal-receiving module for the Heimdall ACU antenna system to dete
 
 ---
 
-## Resume 我的简历
+## Resume
 
 - [View my resume (PDF)](Resume.pdf)
-- [查看我的简历 (PDF)](Resume2.pdf)
 
 ## Project Videos 项目视频
 
