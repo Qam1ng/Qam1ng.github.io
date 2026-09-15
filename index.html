@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qing Yan 颜青</title>
+<meta name="description" content="Ph.D. student @ UCLA · Embodied AI, HRI, Home Robots & Agentic Robotics">
+<style>
+  :root {
+    --text: #1f2328;
+    --muted: #6a737d;
+    --line: #e8eaed;
+    --accent: #0f62c6;
+    --bg: #ffffff;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+                 Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 56px 24px 64px;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Header */
+  .hero {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+  .hero img {
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  .hero h1 {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+  .hero .tagline {
+    font-size: 15.5px;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .hero .subline {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .links {
+    font-size: 14.5px;
+  }
+  .links a { margin-right: 4px; }
+  .links span.sep { color: #c8ccd0; margin-right: 4px; }
+
+  /* Sections */
+  section { margin-bottom: 38px; }
+  h2 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 8px;
+    margin-bottom: 18px;
+  }
+  section p { margin-bottom: 10px; }
+
+  .interests {
+    font-size: 14.5px;
+    color: var(--muted);
+  }
+
+  /* Entry rows */
+  .entry { margin-bottom: 18px; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+  }
+  .entry-title { font-weight: 600; font-size: 16px; }
+  .entry-date {
+    color: var(--muted);
+    font-size: 13.5px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .entry-sub {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 2px;
+  }
+  .entry-desc {
+    font-size: 14.5px;
+    color: #3f454c;
+  }
+  .entry-desc a { white-space: nowrap; }
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #915907;
+    background: #fdf3df;
+    border-radius: 4px;
+    padding: 1px 8px;
+    margin-left: 6px;
+    vertical-align: 1px;
+  }
+
+  /* Publications */
+  .pub { margin-bottom: 14px; font-size: 15px; }
+  .pub:last-child { margin-bottom: 0; }
+  .pub .venue { color: var(--muted); font-size: 14px; font-style: italic; }
+
+  /* Skills */
+  .skills { font-size: 14.5px; }
+  .skills b { font-weight: 600; }
+  .skills div { margin-bottom: 4px; }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  @media (max-width: 560px) {
+    .page { padding: 36px 20px 48px; }
+    .hero { flex-direction: column; text-align: center; gap: 18px; }
+    .entry-head { flex-direction: column; gap: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="hero">
+    <img src="images/profile.jpg" alt="Qing Yan">
+    <div>
+      <h1>Qing Yan&ensp;颜青</h1>
+      <div class="tagline"><b>Ph.D. Student @ UCLA</b>, advised by <a href="http://drlinyang.net">Prof.&nbsp;Lin&nbsp;F.&nbsp;Yang</a></div>
+      <div class="subline">M.S.E. Robotics @ Johns Hopkins · B.S. ECE @ UW Seattle · 📍 Los Angeles, CA</div>
+      <div class="links">
+        <a href="mailto:qyan13@jh.edu">Email</a><span class="sep">·</span>
+        <a href="https://linkedin.com/in/qing-yan">LinkedIn</a><span class="sep">·</span>
+        <a href="https://github.com/Qam1ng">GitHub</a><span class="sep">·</span>
+        <a href="https://keploreai.com">KeploreAI</a><span class="sep">·</span>
+        <a href="Resume.pdf">Resume</a>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <h2>About</h2>
+    <p>I am a first-year Ph.D. student at UCLA, advised by <a href="http://drlinyang.net">Prof. Lin F. Yang</a>. I build agentic systems that let robots learn, reason, and act autonomously in human environments.</p>
+    <p>Previously I received my M.S.E. in Robotics from Johns Hopkins (LCSR, Intuitive Computing Lab with Prof. Chien-Ming Huang) and my B.S. in ECE from the University of Washington. I am also Cofounder &amp; COO of <a href="https://keploreai.com">KeploreAI</a>.</p>
+    <p class="interests">Embodied AI · Human-Robot Interaction · Home Robots · Agentic Robotics</p>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
+    <div class="pub">
+      <b>GUIDES: Guidance Using Instructor-Distilled Embeddings for Pretrained Robot Policy Enhancement</b><br>
+      Gao, M., <b>Yan, Q.</b>, &amp; Li, X. — <span class="venue">ICRA 2026</span> · <a href="https://arxiv.org/abs/2511.03400">arXiv</a>
+    </div>
+    <div class="pub">
+      <b>Scouting by Reward: VLM-to-IRL-Driven Player Selection for Esports</b><br>
+      Yang, W., &amp; <b>Yan, Q.</b> — <span class="venue">Preprint 2026</span> · <a href="https://arxiv.org/abs/2604.14474">arXiv</a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience &amp; Projects</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">HearSay Agent — IOAI 2026 AI Models Track<span class="badge">🥉 Bronze Award</span></span>
+        <span class="entry-date">Jul 2026</span>
+      </div>
+      <div class="entry-desc">An autonomous agent that writes, runs, and submits ML code entirely by itself on olympiad ML tasks — three parallel Claude Code solvers coordinated by a shared facts board and a deterministic harness. <a href="https://github.com/Qam1ng/ioai-2026-agent">GitHub ↗</a></div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">MindAct — KeploreAI</span>
+        <span class="entry-date">Mar 2026</span>
+      </div>
+      <div class="entry-desc">A desktop AI workspace pairing a Claude Code terminal with a knowledge graph and dependency analysis: it checks what domain knowledge a task needs before the agent acts. Built for robotics and control engineering. <a href="https://github.com/KeploreAI-Lab/MindAct">GitHub ↗</a></div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Human-Robot Interaction — Intuitive Computing Lab, JHU</span>
+        <span class="entry-date">2025 – 2026</span>
+      </div>
+      <div class="entry-desc">Built <i>WeakRobotRestaurant</i>, a 2D HRI game studying how limited-capability robots persuade people to help, analyzed with causal inference; developed a VLM semantic-guidance framework for pre-trained robot policies on a UR5 arm (ICRA 2026); built an LLM voice-command system for the Stretch RE1.</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Humanoid Locomotion — Qiyuan Lab</span>
+        <span class="entry-date">2024</span>
+      </div>
+      <div class="entry-desc">Trained the Qijiang No.1 humanoid for straight-leg walking with PPO, and implemented a UVC controller for stable bent-leg walking.</div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Autonomous Wheelchair — UW ENGINE Capstone (Cyberworks Robotics)</span>
+        <span class="entry-date">2024</span>
+      </div>
+      <div class="entry-desc">Affordable autonomous navigation for power wheelchairs: SLAM + YOLO on ROS with RealSense, RPLidar, and IMU, plus occupancy-grid anomaly detection for mode switching. <a href="https://youtu.be/KzpJeC7L7hM">Video ↗</a></div>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title">Embedded Antenna Signals — SEAL, UW</span>
+        <span class="entry-date">2023</span>
+      </div>
+      <div class="entry-desc">Designed the signal-receiving module (transformer, preamplifier, DAQ) of the Heimdall ACU antenna system for detecting weak electromagnetic interference.</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><b>Programming:</b> Python, C++, Java, RobotC, Swift</div>
+      <div><b>AI &amp; Algorithms:</b> ROS, RL, LLM / VLM, Computer Vision, SLAM, Causal Inference, Agentic Systems</div>
+      <div><b>Hardware:</b> Humanoids, Stretch, XLeRobot, UR5, LiDAR, RealSense, PCB, Arduino, Raspberry Pi, FPGA</div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Qing Yan · <a href="https://youtu.be/1jFw59NL1z8">Course project videos</a>
+  </footer>
+
+</div>
+</body>
+</html>
