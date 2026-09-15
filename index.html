@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,9 +26,28 @@
     max-width: 780px;
     margin: 0 auto;
     padding: 56px 24px 64px;
+    position: relative;
   }
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
+
+  /* Language toggle */
+  html[data-lang="en"] .zh { display: none; }
+  html[data-lang="zh"] .en { display: none; }
+  .lang-toggle {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-size: 13px;
+    color: var(--muted);
+    background: none;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 2px 12px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .lang-toggle:hover { color: var(--accent); border-color: var(--accent); }
 
   /* Header */
   .hero {
@@ -50,21 +69,12 @@
     letter-spacing: -0.02em;
     margin-bottom: 6px;
   }
-  .hero .tagline {
-    font-size: 15.5px;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-  .hero .subline {
-    font-size: 14px;
-    color: var(--muted);
-    margin-bottom: 12px;
-  }
-  .links {
-    font-size: 14.5px;
-  }
+  .hero .tagline { font-size: 15.5px; margin-bottom: 4px; }
+  .hero .subline { font-size: 14px; color: var(--muted); margin-bottom: 12px; }
+  .links { font-size: 14.5px; }
   .links a { margin-right: 4px; }
   .links span.sep { color: #c8ccd0; margin-right: 4px; }
+  .note { color: var(--muted); font-size: 13px; }
 
   /* Sections */
   section { margin-bottom: 38px; }
@@ -79,11 +89,7 @@
     margin-bottom: 18px;
   }
   section p { margin-bottom: 10px; }
-
-  .interests {
-    font-size: 14.5px;
-    color: var(--muted);
-  }
+  .interests { font-size: 14.5px; color: var(--muted); }
 
   /* Entry rows */
   .entry { margin-bottom: 18px; }
@@ -101,37 +107,13 @@
     white-space: nowrap;
     flex-shrink: 0;
   }
-  .entry-sub {
-    font-size: 14px;
-    color: var(--muted);
-    margin-bottom: 2px;
-  }
-  .entry-desc {
-    font-size: 14.5px;
-    color: #3f454c;
-  }
+  .entry-desc { font-size: 14.5px; color: #3f454c; }
   .entry-desc a { white-space: nowrap; }
-  .badge {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 600;
-    color: #915907;
-    background: #fdf3df;
-    border-radius: 4px;
-    padding: 1px 8px;
-    margin-left: 6px;
-    vertical-align: 1px;
-  }
 
   /* Publications */
   .pub { margin-bottom: 14px; font-size: 15px; }
   .pub:last-child { margin-bottom: 0; }
   .pub .venue { color: var(--muted); font-size: 14px; font-style: italic; }
-
-  /* Skills */
-  .skills { font-size: 14.5px; }
-  .skills b { font-weight: 600; }
-  .skills div { margin-bottom: 4px; }
 
   footer {
     border-top: 1px solid var(--line);
@@ -141,99 +123,151 @@
   }
 
   @media (max-width: 560px) {
-    .page { padding: 36px 20px 48px; }
+    .page { padding: 44px 20px 48px; }
     .hero { flex-direction: column; text-align: center; gap: 18px; }
     .entry-head { flex-direction: column; gap: 0; }
+    .lang-toggle { top: 12px; right: 16px; }
   }
 </style>
 </head>
 <body>
 <div class="page">
 
+  <button class="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
+    <span class="en">中文</span><span class="zh">English</span>
+  </button>
+
   <div class="hero">
     <img src="images/profile.jpg" alt="Qing Yan">
     <div>
       <h1>Qing Yan&ensp;颜青</h1>
-      <div class="tagline"><b>Ph.D. Student @ UCLA</b>, advised by <a href="http://drlinyang.net">Prof.&nbsp;Lin&nbsp;F.&nbsp;Yang</a></div>
-      <div class="subline">M.S.E. Robotics @ Johns Hopkins · B.S. ECE @ UW Seattle · 📍 Los Angeles, CA</div>
+      <div class="tagline">
+        <span class="en"><b>Ph.D. Student @ UCLA</b>, advised by <a href="http://drlinyang.net">Prof.&nbsp;Lin&nbsp;F.&nbsp;Yang</a></span>
+        <span class="zh"><b>加州大学洛杉矶分校（UCLA）博士生</b>，导师 <a href="http://drlinyang.net">杨林（Lin&nbsp;F.&nbsp;Yang）教授</a></span>
+      </div>
+      <div class="subline">
+        <span class="en">M.S.E. Robotics @ Johns Hopkins · B.S. ECE @ UW Seattle · 📍 Los Angeles, CA</span>
+        <span class="zh">约翰霍普金斯大学 机器人硕士 · 华盛顿大学 电子与计算机工程学士 · 📍 洛杉矶</span>
+      </div>
       <div class="links">
         <a href="mailto:qyan13@jh.edu">Email</a><span class="sep">·</span>
         <a href="https://linkedin.com/in/qing-yan">LinkedIn</a><span class="sep">·</span>
         <a href="https://github.com/Qam1ng">GitHub</a><span class="sep">·</span>
         <a href="https://keploreai.com">KeploreAI</a><span class="sep">·</span>
-        <a href="Resume.pdf">Resume</a> <span style="color:var(--muted); font-size:13px;">(不定期更新)</span>
+        <a href="Resume.pdf"><span class="en">Resume</span><span class="zh">简历</span></a>
+        <span class="note"><span class="en">(updated occasionally)</span><span class="zh">（不定期更新）</span></span>
       </div>
     </div>
   </div>
 
   <section>
-    <h2>About</h2>
-    <p>I am a first-year Ph.D. student at UCLA, advised by <a href="http://drlinyang.net">Prof. Lin F. Yang</a>. I build agentic systems that let robots learn, reason, and act autonomously in human environments.</p>
-    <p>Previously I received my M.S.E. in Robotics from Johns Hopkins (LCSR, Intuitive Computing Lab with Prof. Chien-Ming Huang) and my B.S. in ECE from the University of Washington. I am also Cofounder &amp; COO of <a href="https://keploreai.com">KeploreAI</a>.</p>
-    <p class="interests">Embodied AI · Human-Robot Interaction · Home Robots · Agentic Robotics</p>
+    <h2><span class="en">About</span><span class="zh">关于我</span></h2>
+    <span class="en">
+      <p>I am a first-year Ph.D. student at UCLA, advised by <a href="http://drlinyang.net">Prof. Lin F. Yang</a>. I build agentic systems that let robots learn, reason, and act autonomously in human environments.</p>
+      <p>Previously I received my M.S.E. in Robotics from Johns Hopkins (LCSR, Intuitive Computing Lab with Prof. Chien-Ming Huang) and my B.S. in ECE from the University of Washington. I am also Cofounder &amp; COO of <a href="https://keploreai.com">KeploreAI</a>.</p>
+      <p class="interests">Embodied AI · Human-Robot Interaction · Home Robots · Agentic Robotics</p>
+    </span>
+    <span class="zh">
+      <p>我是加州大学洛杉矶分校（UCLA）一年级博士生，导师是<a href="http://drlinyang.net">杨林（Lin F. Yang）教授</a>。我的研究是构建智能体系统，让机器人在人类环境中自主地学习、推理与行动。</p>
+      <p>此前我在约翰霍普金斯大学获得机器人硕士学位（LCSR 实验室，Intuitive Computing Lab，导师 Chien-Ming Huang 教授），在华盛顿大学西雅图分校获得电子与计算机工程学士学位。我也是 <a href="https://keploreai.com">KeploreAI</a> 联合创始人兼 COO。</p>
+      <p class="interests">具身智能 · 人机交互 · 家庭机器人 · 智能体机器人</p>
+    </span>
   </section>
 
   <section>
-    <h2>Publications</h2>
+    <h2><span class="en">Publications</span><span class="zh">论文发表</span></h2>
     <div class="pub">
       <b>GUIDES: Guidance Using Instructor-Distilled Embeddings for Pretrained Robot Policy Enhancement</b><br>
       Gao, M., <b>Yan, Q.</b>, &amp; Li, X. — <span class="venue">ICRA 2026</span> · <a href="https://arxiv.org/abs/2511.03400">arXiv</a>
     </div>
     <div class="pub">
       <b>Scouting by Reward: VLM-to-IRL-Driven Player Selection for Esports</b><br>
-      Yang, W., &amp; <b>Yan, Q.</b> — <span class="venue">Preprint 2026</span> · <a href="https://arxiv.org/abs/2604.14474">arXiv</a>
+      Yang, W., &amp; <b>Yan, Q.</b> — <span class="venue"><span class="en">Preprint 2026</span><span class="zh">预印本 2026</span></span> · <a href="https://arxiv.org/abs/2604.14474">arXiv</a>
     </div>
   </section>
 
   <section>
-    <h2>Experience &amp; Projects</h2>
+    <h2><span class="en">Experience &amp; Projects</span><span class="zh">经历与项目</span></h2>
 
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">HearSay Agent — IOAI 2026 AI Models Track<span class="badge">🥉 Bronze Award</span></span>
-        <span class="entry-date">Jul 2026</span>
+        <span class="entry-title">
+          <span class="en">HearSay Agent — IOAI 2026 AI Models Track, Bronze Award</span>
+          <span class="zh">HearSay Agent — IOAI 2026 AI 模型赛道，铜奖</span>
+        </span>
+        <span class="entry-date"><span class="en">Jul 2026</span><span class="zh">2026 年 7 月</span></span>
       </div>
-      <div class="entry-desc">An autonomous agent that writes, runs, and submits ML code entirely by itself on olympiad ML tasks — three parallel Claude Code solvers coordinated by a shared facts board and a deterministic harness. <a href="https://github.com/Qam1ng/ioai-2026-agent">GitHub ↗</a></div>
+      <div class="entry-desc">
+        <span class="en">An autonomous agent that writes, runs, and submits ML code entirely by itself on olympiad ML tasks — three parallel Claude Code solvers coordinated by a shared facts board and a deterministic harness. <a href="https://github.com/Qam1ng/ioai-2026-agent">GitHub ↗</a></span>
+        <span class="zh">在奥赛级机器学习任务上完全自主地编写、运行并提交代码的智能体系统——三个并行的 Claude Code 求解器通过共享事实板与确定性执行框架协作。<a href="https://github.com/Qam1ng/ioai-2026-agent">GitHub ↗</a></span>
+      </div>
     </div>
 
     <div class="entry">
       <div class="entry-head">
         <span class="entry-title">MindAct — KeploreAI</span>
-        <span class="entry-date">Mar 2026</span>
+        <span class="entry-date"><span class="en">Mar 2026</span><span class="zh">2026 年 3 月</span></span>
       </div>
-      <div class="entry-desc">A desktop AI workspace pairing a Claude Code terminal with a knowledge graph and dependency analysis: it checks what domain knowledge a task needs before the agent acts. Built for robotics and control engineering. <a href="https://github.com/KeploreAI-Lab/MindAct">GitHub ↗</a></div>
+      <div class="entry-desc">
+        <span class="en">A desktop AI workspace pairing a Claude Code terminal with a knowledge graph and dependency analysis: it checks what domain knowledge a task needs before the agent acts. Built for robotics and control engineering. <a href="https://github.com/KeploreAI-Lab/MindAct">GitHub ↗</a></span>
+        <span class="zh">桌面 AI 工作台：将 Claude Code 终端与知识图谱、依赖分析引擎结合——智能体行动之前，先检查任务需要哪些领域知识、已有哪些、缺哪些。面向机器人、控制等领域工程场景。<a href="https://github.com/KeploreAI-Lab/MindAct">GitHub ↗</a></span>
+      </div>
     </div>
 
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">Human-Robot Interaction — Intuitive Computing Lab, JHU</span>
+        <span class="entry-title">
+          <span class="en">Human-Robot Interaction — Intuitive Computing Lab, JHU</span>
+          <span class="zh">人机交互 — 约翰霍普金斯大学 Intuitive Computing Lab</span>
+        </span>
         <span class="entry-date">2025 – 2026</span>
       </div>
-      <div class="entry-desc">Built <i>WeakRobotRestaurant</i>, a 2D HRI game studying how limited-capability robots persuade people to help, analyzed with causal inference; developed a VLM semantic-guidance framework for pre-trained robot policies on a UR5 arm (ICRA 2026); built an LLM voice-command system for the Stretch RE1.</div>
+      <div class="entry-desc">
+        <span class="en">Built <a href="https://jh.qualtrics.com/jfe/form/SV_2tOauu1aTndQUQu"><i>WeakRobotRestaurant</i> ↗</a>, a 2D HRI game studying how limited-capability robots persuade people to help, analyzed with causal inference; developed a VLM semantic-guidance framework for pre-trained robot policies on a UR5 arm (ICRA 2026); built an LLM voice-command system for the Stretch RE1.</span>
+        <span class="zh">开发 <a href="https://jh.qualtrics.com/jfe/form/SV_2tOauu1aTndQUQu"><i>WeakRobotRestaurant</i> ↗</a>——研究弱能力机器人如何说服人类帮忙的 2D 人机交互游戏，用因果推断分析劝说策略；提出基于 VLM 的语义引导框架增强预训练机器人策略，在 UR5 机械臂上验证（ICRA 2026）；为 Stretch RE1 移动操作机器人搭建 LLM 语音指令系统。</span>
+      </div>
     </div>
 
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">Humanoid Locomotion — Qiyuan Lab</span>
+        <span class="entry-title">
+          <span class="en">Humanoid Locomotion — Qiyuan Lab</span>
+          <span class="zh">人形机器人行走 — 启元实验室</span>
+        </span>
         <span class="entry-date">2024</span>
       </div>
-      <div class="entry-desc">Trained the Qijiang No.1 humanoid for straight-leg walking with PPO, and implemented a UVC controller for stable bent-leg walking.</div>
+      <div class="entry-desc">
+        <span class="en">Trained the Qijiang No.1 humanoid for straight-leg walking with PPO, and implemented a UVC controller for stable bent-leg walking.</span>
+        <span class="zh">用 PPO 强化学习训练"启江一号"人形机器人直腿行走，并实现 UVC 控制器完成稳定的屈腿行走。</span>
+      </div>
     </div>
 
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">Autonomous Wheelchair — UW ENGINE Capstone (Cyberworks Robotics)</span>
+        <span class="entry-title">
+          <span class="en">Autonomous Wheelchair — UW ENGINE Capstone (Cyberworks Robotics)</span>
+          <span class="zh">自动驾驶轮椅 — 华盛顿大学 ENGINE 毕业设计（Cyberworks Robotics）</span>
+        </span>
         <span class="entry-date">2024</span>
       </div>
-      <div class="entry-desc">Affordable autonomous navigation for power wheelchairs: SLAM + YOLO on ROS with RealSense, RPLidar, and IMU, plus occupancy-grid anomaly detection for mode switching.</div>
+      <div class="entry-desc">
+        <span class="en">Affordable autonomous navigation for power wheelchairs: SLAM + YOLO on ROS with RealSense, RPLidar, and IMU, plus occupancy-grid anomaly detection for mode switching.</span>
+        <span class="zh">为电动轮椅打造低成本自主导航：ROS 上结合 SLAM 与 YOLO，使用 RealSense、RPLidar 与 IMU，并通过占据栅格异常检测切换导航模式。</span>
+      </div>
     </div>
 
     <div class="entry">
       <div class="entry-head">
-        <span class="entry-title">Embedded Antenna Signals — SEAL, UW</span>
+        <span class="entry-title">
+          <span class="en">Embedded Antenna Signals — SEAL, UW</span>
+          <span class="zh">天线信号接收模块 — 华盛顿大学 SEAL 实验室</span>
+        </span>
         <span class="entry-date">2023</span>
       </div>
-      <div class="entry-desc">Designed the signal-receiving module (transformer, preamplifier, DAQ) of the Heimdall ACU antenna system for detecting weak electromagnetic interference.</div>
+      <div class="entry-desc">
+        <span class="en">Designed the signal-receiving module (transformer, preamplifier, DAQ) of the Heimdall ACU antenna system for detecting weak electromagnetic interference.</span>
+        <span class="zh">为 Heimdall ACU 天线系统设计微弱电磁干扰信号接收模块（变压器、前置放大器、数据采集）。</span>
+      </div>
     </div>
   </section>
 
@@ -246,5 +280,20 @@
   </footer>
 
 </div>
+
+<script>
+  function setLang(lang) {
+    document.documentElement.dataset.lang = lang;
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    try { localStorage.setItem('lang', lang); } catch (e) {}
+  }
+  function toggleLang() {
+    setLang(document.documentElement.dataset.lang === 'en' ? 'zh' : 'en');
+  }
+  try {
+    var saved = localStorage.getItem('lang');
+    if (saved === 'zh' || saved === 'en') setLang(saved);
+  } catch (e) {}
+</script>
 </body>
 </html>
