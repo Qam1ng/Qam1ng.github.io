@@ -4,21 +4,21 @@
 
 # Qing Yan 颜青
 
-**M.S.E. Robotics @ Johns Hopkins University** &nbsp;·&nbsp; B.S. ECE @ University of Washington
+**Ph.D. Student @ UCLA** &nbsp;·&nbsp; M.S.E. Robotics @ Johns Hopkins University &nbsp;·&nbsp; B.S. ECE @ University of Washington
 
-📍 Baltimore, MD &nbsp;·&nbsp; [Email](mailto:qyan13@jh.edu) &nbsp;·&nbsp; [LinkedIn](https://linkedin.com/in/qing-yan) &nbsp;·&nbsp; [GitHub](https://github.com/Qam1ng) &nbsp;·&nbsp; [KeploreAI](https://keploreai.com)
+📍 Los Angeles, CA &nbsp;·&nbsp; [Email](mailto:qyan13@jh.edu) &nbsp;·&nbsp; [LinkedIn](https://linkedin.com/in/qing-yan) &nbsp;·&nbsp; [GitHub](https://github.com/Qam1ng) &nbsp;·&nbsp; [KeploreAI](https://keploreai.com)
 
 ---
 
 ## About
 
-I am a Robotics M.S.E. student and graduate researcher at the Johns Hopkins University Laboratory for Computational Sensing + Robotics (LCSR), working in the Intuitive Computing Lab with Prof. Chien-Ming Huang.
+I am a first-year Ph.D. student at the University of California, Los Angeles, advised by [Prof. Lin F. Yang](http://drlinyang.net).
 
-My research centers on **human-robot interaction, control algorithms, and mental models for embodied agents** — using vision-language models and reinforcement learning to enhance pre-trained robot policies, and modeling how robots should represent context when delegating tasks to people.
+My research focuses on **embodied AI, human-robot interaction, home robots, and agentic robotics** — building agentic systems that let robots learn, reason, and act autonomously in human environments.
 
-I earned my B.S. in Electrical & Computer Engineering at the University of Washington, Seattle, where I was a research associate at the Sensors, Energy, and Automation Laboratory (SEAL). I am also Cofounder & COO of [KeploreAI](https://keploreai.com).
+Previously, I received my M.S.E. in Robotics from the Johns Hopkins University Laboratory for Computational Sensing + Robotics (LCSR), where I worked in the Intuitive Computing Lab with Prof. Chien-Ming Huang, and my B.S. in Electrical & Computer Engineering from the University of Washington, Seattle, where I was a research associate at the Sensors, Energy, and Automation Laboratory (SEAL). I am also Cofounder & COO of [KeploreAI](https://keploreai.com).
 
-**Research interests:** Robotics · Human-Robot Interaction · Control Algorithms · Reinforcement Learning · Vision-Language Models · Mental Models for Embodied Agents
+**Research interests:** Embodied AI · Human-Robot Interaction · Home Robots · Agentic Robotics
 
 ---
 
@@ -35,6 +35,14 @@ Yang, W., & **Yan, Q.** *Preprint, 2026.*
 ---
 
 ## Research & Projects
+
+**HearSay Agent — IOAI 2026 AI Models Track, 🥉 Bronze Award (Jul 2026)**
+An autonomous agentic system for the IOAI 2026 AI Models Track: given an olympiad ML task, it writes, runs, and submits machine-learning code entirely by itself — a human only presses "start". Three parallel Claude Code solvers coordinate through a shared facts board and a deterministic harness, wrapped in an Evidence Firewall that freezes model, budget, and submission authority before each run. Earned a Bronze Award at IOAI 2026.
+[GitHub](https://github.com/Qam1ng/ioai-2026-agent)
+
+**MindAct — KeploreAI (Mar 2026)**
+A desktop AI workspace that combines a Claude Code terminal, an Obsidian-style knowledge graph, and a dependency-analysis engine. Before the agent acts, MindAct checks what domain knowledge the task needs, what already exists in the knowledge base, and what's missing — then enriches the prompt automatically. Purpose-built for domain-specific engineering such as robotics, physics simulation, and control systems.
+[GitHub](https://github.com/KeploreAI-Lab/MindAct)
 
 **Human-Robot Interaction — Intuitive Computing Lab, JHU**
 Built *WeakRobotRestaurant*, a 2D HRI game where limited-capability service robots ask people for help; logged contextual factors (workload, urgency, effort) and applied causal inference to study persuasion strategies, framing the result as a proto-mental world model for social delegation. Developed a VLM semantic-guidance framework to upgrade pre-trained robot policies, validated on a physical UR5 arm (ICRA 2026). Designed the interactive infrastructure and an LLM-based voice command system for the Stretch RE1 mobile manipulator.
