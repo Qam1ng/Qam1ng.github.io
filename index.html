@@ -7,11 +7,25 @@
 <meta name="description" content="Ph.D. student @ UCLA · Embodied AI, HRI, Home Robots & Agentic Robotics">
 <style>
   :root {
-    --text: #1f2328;
-    --muted: #6a737d;
-    --line: #e8eaed;
-    --accent: #0f62c6;
+    --text: #23272e;
+    --muted: #68717c;
+    --line: #e7eaee;
+    --accent: #3b5bdb;
+    --accent-soft: #eef1fd;
     --bg: #ffffff;
+    --hover: #f6f8fb;
+    --serif: "Charter", "Iowan Old Style", "Source Serif Pro", Georgia, "Songti SC", "SimSun", serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #dfe3e8;
+      --muted: #98a1ac;
+      --line: #2a3038;
+      --accent: #8ea4f5;
+      --accent-soft: #232b42;
+      --bg: #14171c;
+      --hover: #1b2027;
+    }
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -19,81 +33,111 @@
                  Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
     color: var(--text);
     background: var(--bg);
-    line-height: 1.6;
+    line-height: 1.65;
     font-size: 16px;
+  }
+  .banner {
+    height: 150px;
+    background:
+      radial-gradient(ellipse 60% 120% at 20% 0%, rgba(99,139,250,.28), transparent 60%),
+      radial-gradient(ellipse 50% 120% at 70% 0%, rgba(167,139,250,.22), transparent 60%),
+      radial-gradient(ellipse 50% 100% at 100% 20%, rgba(45,212,191,.18), transparent 60%);
   }
   .page {
     max-width: 780px;
     margin: 0 auto;
-    padding: 56px 24px 64px;
+    padding: 0 24px 64px;
     position: relative;
   }
   a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
-  /* Language toggle */
   html[data-lang="en"] .zh { display: none; }
   html[data-lang="zh"] .en { display: none; }
   .lang-toggle {
     position: absolute;
-    top: 20px;
+    top: -110px;
     right: 24px;
     font-size: 13px;
-    color: var(--muted);
-    background: none;
+    color: var(--text);
+    background: color-mix(in srgb, var(--bg) 75%, transparent);
+    backdrop-filter: blur(4px);
     border: 1px solid var(--line);
     border-radius: 14px;
-    padding: 2px 12px;
+    padding: 3px 14px;
     cursor: pointer;
     font-family: inherit;
   }
   .lang-toggle:hover { color: var(--accent); border-color: var(--accent); }
 
-  /* Header */
   .hero {
     display: flex;
-    align-items: center;
-    gap: 32px;
+    align-items: flex-end;
+    gap: 28px;
+    margin-top: -56px;
     margin-bottom: 40px;
   }
   .hero img {
-    width: 148px;
-    height: 148px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     flex-shrink: 0;
+    border: 4px solid var(--bg);
+    box-shadow: 0 4px 16px rgba(0,0,0,.12);
   }
+  .hero-text { padding-bottom: 4px; }
   .hero h1 {
-    font-size: 30px;
+    font-family: var(--serif);
+    font-size: 34px;
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
     margin-bottom: 6px;
   }
   .hero .tagline { font-size: 15.5px; margin-bottom: 4px; }
   .hero .subline { font-size: 14px; color: var(--muted); margin-bottom: 12px; }
   .links { font-size: 14.5px; }
-  .links a { margin-right: 4px; }
-  .links span.sep { color: #c8ccd0; margin-right: 4px; }
+  .links a { margin-right: 4px; font-weight: 500; }
+  .links span.sep { color: var(--line); margin-right: 4px; }
   .note { color: var(--muted); font-size: 13px; }
 
-  /* Sections */
-  section { margin-bottom: 38px; }
+  section { margin-bottom: 42px; }
   h2 {
-    font-size: 13px;
+    font-family: var(--serif);
+    font-size: 21px;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--muted);
-    border-bottom: 1px solid var(--line);
-    padding-bottom: 8px;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  h2::before {
+    content: "";
+    width: 22px;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--accent), #9f7ff0);
+    flex-shrink: 0;
   }
   section p { margin-bottom: 10px; }
-  .interests { font-size: 14.5px; color: var(--muted); }
 
-  /* Entry rows */
-  .entry { margin-bottom: 18px; }
-  .entry:last-child { margin-bottom: 0; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+  .tag {
+    font-size: 13px;
+    padding: 3px 12px;
+    border-radius: 20px;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  .entry {
+    padding: 12px 14px;
+    margin: 0 -14px 8px;
+    border-radius: 10px;
+    transition: background .15s;
+  }
+  .entry:hover { background: var(--hover); }
   .entry-head {
     display: flex;
     justify-content: space-between;
@@ -101,17 +145,16 @@
     gap: 16px;
   }
   .entry-title { font-weight: 600; font-size: 16px; }
-  .entry-date {
-    color: var(--muted);
-    font-size: 13.5px;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-  .entry-desc { font-size: 14.5px; color: #3f454c; }
+  .entry-date { color: var(--muted); font-size: 13.5px; white-space: nowrap; flex-shrink: 0; }
+  .entry-desc { font-size: 14.5px; color: var(--muted); }
   .entry-desc a { white-space: nowrap; }
 
-  /* Publications */
-  .pub { margin-bottom: 14px; font-size: 15px; }
+  .pub {
+    margin-bottom: 14px;
+    font-size: 15px;
+    padding-left: 14px;
+    border-left: 3px solid var(--accent-soft);
+  }
   .pub:last-child { margin-bottom: 0; }
   .pub .venue { color: var(--muted); font-size: 14px; font-style: italic; }
 
@@ -123,23 +166,24 @@
   }
 
   @media (max-width: 560px) {
-    .page { padding: 44px 20px 48px; }
-    .hero { flex-direction: column; text-align: center; gap: 18px; }
+    .banner { height: 120px; }
+    .hero { flex-direction: column; align-items: center; text-align: center; gap: 14px; margin-top: -70px; }
     .entry-head { flex-direction: column; gap: 0; }
-    .lang-toggle { top: 12px; right: 16px; }
+    .lang-toggle { top: -100px; right: 16px; }
+    .tags { justify-content: center; }
   }
 </style>
 </head>
 <body>
+<div class="banner"></div>
 <div class="page">
 
   <button class="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
     <span class="en">中文</span><span class="zh">English</span>
   </button>
-
   <div class="hero">
     <img src="images/profile.jpg" alt="Qing Yan">
-    <div>
+    <div class="hero-text">
       <h1>Qing Yan&ensp;颜青</h1>
       <div class="tagline">
         <span class="en"><b>Ph.D. Student @ UCLA</b>, advised by <a href="http://drlinyang.net">Prof.&nbsp;Lin&nbsp;F.&nbsp;Yang</a></span>
@@ -165,12 +209,12 @@
     <span class="en">
       <p>I am a first-year Ph.D. student at UCLA, advised by <a href="http://drlinyang.net">Prof. Lin F. Yang</a>. I build agentic systems that let robots learn, reason, and act autonomously in human environments.</p>
       <p>Previously I received my M.S.E. in Robotics from Johns Hopkins (LCSR, Intuitive Computing Lab with Prof. Chien-Ming Huang) and my B.S. in ECE from the University of Washington. I am also Cofounder &amp; COO of <a href="https://keploreai.com">KeploreAI</a>.</p>
-      <p class="interests">Embodied AI · Human-Robot Interaction · Home Robots · Agentic Robotics</p>
+      <div class="tags"><span class="tag">Embodied AI</span><span class="tag">Human-Robot Interaction</span><span class="tag">Home Robots</span><span class="tag">Agentic Robotics</span></div>
     </span>
     <span class="zh">
       <p>我是加州大学洛杉矶分校（UCLA）一年级博士生，导师是<a href="http://drlinyang.net">杨林（Lin F. Yang）教授</a>。我的研究是构建智能体系统，让机器人在人类环境中自主地学习、推理与行动。</p>
       <p>此前我在约翰霍普金斯大学获得机器人硕士学位（LCSR 实验室，Intuitive Computing Lab，导师 Chien-Ming Huang 教授），在华盛顿大学西雅图分校获得电子与计算机工程学士学位。我也是 <a href="https://keploreai.com">KeploreAI</a> 联合创始人兼 COO。</p>
-      <p class="interests">具身智能 · 人机交互 · 家庭机器人 · 智能体机器人</p>
+      <div class="tags"><span class="tag">具身智能</span><span class="tag">人机交互</span><span class="tag">家庭机器人</span><span class="tag">智能体机器人</span></div>
     </span>
   </section>
 
