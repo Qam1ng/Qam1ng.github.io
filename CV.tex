@@ -1,0 +1,116 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[top=0.5in,bottom=0.5in,left=0.6in,right=0.6in]{geometry}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Heros}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}\setlength{\parskip}{3pt}
+\pagestyle{empty}
+
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\vspace{-0.5em}\rule{\textwidth}{0.6pt}]
+\titlespacing*{\section}{0pt}{0.5em}{0.3em}
+\setlist[itemize]{leftmargin=1.2em,itemsep=0pt,topsep=1pt,parsep=0pt}
+
+\newcommand{\entry}[4]{\noindent\textbf{#1}\hfill #2\\ \textit{#3}\hfill #4}
+\newcommand{\entryb}[2]{\noindent\textbf{#1}\hfill #2}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries QING YAN}\\[3pt]
+Los Angeles, CA \,·\, \href{mailto:q1ngyan@ucla.edu}{q1ngyan@ucla.edu} \,·\, +1 206-209-6598\\
+\href{https://qam1ng.github.io}{qam1ng.github.io} \,·\, \href{https://linkedin.com/in/qing-yan}{linkedin.com/in/qing-yan} \,·\, \href{https://github.com/Qam1ng}{github.com/Qam1ng}
+\end{center}
+
+\section{Research Interests}
+Agentic systems that let robots learn, reason, and act autonomously in human environments: LLM-driven task planning and skill composition for long-horizon manipulation, enhancing pre-trained robot policies with vision-language models and reinforcement learning, and human-robot interaction.
+
+\section{Education}
+\entry{University of California, Los Angeles}{Sep 2026 -- Present}{Ph.D. in Electrical \& Computer Engineering}{Los Angeles, CA}\\ \textit{Lin Yang's Research Group, advised by Prof. Lin F. Yang}
+
+\entry{Johns Hopkins University}{Aug 2026}{M.S.E. in Robotics}{Baltimore, MD}\\ \textit{Intuitive Computing Lab (LCSR), advised by Prof. Chien-Ming Huang}
+
+\entry{University of Washington}{Jun 2024}{B.S. in Electrical \& Computer Engineering}{Seattle, WA}\\ \textit{Sensors, Energy \& Automation Laboratory (SEAL), Prof. Alexander V. Mamishev}
+\begin{itemize}
+\item Cumulative GPA 3.68 \,·\, Dean's List every quarter
+\end{itemize}
+
+\section{Publications}
+\begin{itemize}
+\item Gao, M., \textbf{Yan, Q.}, \& Li, X. (2026). GUIDES: Guidance Using Instructor-Distilled Embeddings for Pre-trained Robot Policy Enhancement. \textit{IEEE International Conference on Robotics and Automation (ICRA)}, 2026. \href{https://arxiv.org/abs/2511.03400}{arxiv.org/abs/2511.03400}. Advised by Prof. Chien-Ming Huang (JHU) and Prof. Jiachen Li (UC Riverside).
+\item Yang, W., \& \textbf{Yan, Q.} (2026). Scouting by Reward: VLM-to-IRL-Driven Player Selection for Esports. \textit{MIT Sloan Sports Analytics Conference} (under review). \href{https://arxiv.org/abs/2604.14474}{arxiv.org/abs/2604.14474}. Advised by Prof. Anton Dahbura (JHU).
+\end{itemize}
+
+\section{Research Experience}
+\entry{Lin Yang's Research Group, UCLA}{Sep 2026 -- Present}{Ph.D. Researcher \,·\, Advised by Prof. Lin F. Yang}{Los Angeles, CA}
+\begin{itemize}
+\item \textbf{Agentic Robot Harness (Skill Composition in RSI):} building an agentic harness for long-horizon manipulation in which an LLM composes task graphs from a skill library and a classical motion planner executes them; studying skill composition and abstraction so the system can expand its own skill set over time.
+\item \textbf{LLM Infrastructure RSI Agent:} developing an agent that iteratively improves LLM infrastructure code through recursive self-improvement.
+\end{itemize}
+
+\entry{Intuitive Computing Lab (LCSR), Johns Hopkins University}{Sep 2024 -- Aug 2026}{Graduate Researcher, Human-Robot Interaction \,·\, Advised by Prof. Chien-Ming Huang}{Baltimore, MD}
+\begin{itemize}
+\item Developed a framework using VLM semantic guidance to upgrade pre-trained robot policies (e.g., behavior cloning); validated on a physical UR5 arm. Published at ICRA 2026 (GUIDES).
+\item Built WeakRobotRestaurant, a 2D human-robot interaction game in which limited-capability service robots ask people for help; logged contextual factors (workload, urgency, effort) and applied causal inference to isolate the effect of persuasion strategies on task acceptance.
+\item Framed the learned context-to-outcome mapping as a proto-mental world model for social delegation, specifying how an embodied robot should represent workload and urgency when choosing persuasion strategies.
+\item Designed the interactive infrastructure and an LLM-based voice command system for the Stretch RE1 mobile manipulator.
+\end{itemize}
+
+\entry{Sports Analytics Research Group, Johns Hopkins University}{Sep 2025 -- Jan 2026}{Independent Researcher \,·\, Advised by Prof. Anton Dahbura}{Baltimore, MD}
+\begin{itemize}
+\item Engineered an esports scouting system combining VLM and metadata embeddings with inverse reinforcement learning to identify professional players most similar to a target profile; validated with the esports organization Fnatic.
+\end{itemize}
+
+\entry{Sensors, Energy \& Automation Laboratory (SEAL), University of Washington}{Apr 2023 -- Apr 2024}{Embedded Team Associate \,·\, Prof. Alexander V. Mamishev}{Seattle, WA}
+\begin{itemize}
+\item Designed the signal-receiving module (transformer, preamplifier, DAQ) for the Heimdall ACU antenna system to detect weak electromagnetic interference.
+\item Contributed to PCB simulation and noise-reduction experiments; supported the Fruit Ripeness Sensor, Ammonia Sensor, and Weak Signal Instrument projects.
+\end{itemize}
+
+\section{Industry Experience}
+\entry{KeploreAI}{May 2025 -- Present}{Cofounder \& COO}{Santa Clara, CA}
+\begin{itemize}
+\item Cofounded the company and its flagship product Kepilot, an AI-driven coding tool built on OpenDevin with environment isolation and Docker integration for academic research and industrial R\&D.
+\item Secured Kepilot deployments and subscriptions across research labs at Stanford, MIT, UC Berkeley, and UCLA.
+\item Introduced Physmind, a second-generation skills library providing end-to-end R\&D solutions for magnetic-material, automotive, and robotics partners (e.g., Tianji Kirin, Geely Auto).
+\item Closed pre-seed funding and opened an active seed round.
+\end{itemize}
+
+\entry{Jianghuai Advance Technology Center (Qiyuan Lab)}{Jul 2024 -- Aug 2024}{Control Algorithm Intern}{Hefei, China}
+\begin{itemize}
+\item Trained the Qijiang No.\,1 humanoid robot for straight-leg walking with PPO reinforcement learning, achieving fluent distance walking in simulation.
+\item Implemented and tuned a Universal Virtual Component (UVC) controller for stable bent-leg walking, moving the control strategy from manual tuning to learning-based methods.
+\end{itemize}
+
+\entry{iFlytek Co., Ltd.}{Jun 2022 -- Sep 2022}{Technology Department Intern}{Hefei, China}
+\begin{itemize}
+\item Analyzed intelligent-manufacturing needs across Anhui Province through enterprise surveys, requirement analysis, and statistical reporting, focused on control systems and robotics.
+\end{itemize}
+
+\section{Selected Projects}
+\entryb{Machine Learning Competition Agent \,·\, IOAI 2026}{2026}
+\begin{itemize}
+\item Built an agentic framework that autonomously solves machine-learning competition tasks end to end.
+\end{itemize}
+
+\entryb{Autonomous Self-Driving Wheelchair \,·\, ENGINE Capstone, UW}{2023 -- 2024}
+\begin{itemize}
+\item Built an autonomous electric wheelchair (sponsored by Cyberwork Robotics) using a RealSense camera, RPLidar, and IMU. Combined SLAM and YOLO with ROS for navigation and obstacle avoidance, integrated the partner's Skylane lane-keeping system, and added an OGMD module to detect abnormal occupancy-grid features and switch navigation modes.
+\end{itemize}
+
+\section{Technical Skills}
+\textbf{Programming:} Python, C++, Java, RobotC, Swift\\
+\textbf{AI \& Algorithms:} ROS, Computer Vision, Machine Learning / Reinforcement Learning, LLM / VLM agents, SLAM, Causal Inference, ReAct, OpenHands\\
+\textbf{Hardware \& Platforms:} Humanoid robots, Stretch RE1, XLeRobot, UR5 arm, autonomous wheelchair, LiDAR, Intel RealSense, PCB design, Arduino, Raspberry Pi, FPGA
+
+\section{Honors \& Awards}
+\begin{itemize}
+\item Dean's List, University of Washington (every quarter)
+\item Semifinalist, VEX Robotics World Championship (2019)
+\item Gold Award, VEX Robotics China National Championship (2019)
+\item Gold Award, VEX Robotics Asian Open (2018)
+\item First Prize (×2), China Adolescent Robotics Competition
+\end{itemize}
+
+\end{document}
