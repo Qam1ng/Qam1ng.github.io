@@ -1,52 +1,57 @@
 \documentclass[10pt,letterpaper]{article}
-\usepackage[top=0.5in,bottom=0.5in,left=0.6in,right=0.6in]{geometry}
+\usepackage[top=0.5in,bottom=0.5in,left=0.85in,right=0.85in]{geometry}
 \usepackage{fontspec}
-\setmainfont{TeX Gyre Heros}
-\newfontfamily\serif{Bitstream Charter}
+\setmainfont{Gelasio}[Path=fonts/,Extension=.ttf,UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic]
 \usepackage{xcolor}
-\definecolor{text}{HTML}{23272E}
-\definecolor{muted}{HTML}{68717C}
-\definecolor{accent}{HTML}{3B5BDB}
-\definecolor{accentb}{HTML}{9F7FF0}
-\definecolor{line}{HTML}{E7EAEE}
+\definecolor{body}{HTML}{222222}
+\definecolor{name}{HTML}{111111}
+\definecolor{title}{HTML}{1a1a1a}
+\definecolor{sub}{HTML}{333333}
+\definecolor{meta}{HTML}{444444}
+\definecolor{dim}{HTML}{555555}
+\definecolor{head}{HTML}{1f3a5f}
+\definecolor{link}{HTML}{1a56a0}
 \usepackage{enumitem}
 \usepackage{titlesec}
-\usepackage{tikz}
-\usepackage[colorlinks=true,urlcolor=accent,linkcolor=accent]{hyperref}
-\usepackage{parskip}\setlength{\parskip}{3pt}
+\usepackage[colorlinks=true,urlcolor=link,linkcolor=link]{hyperref}
+\usepackage{needspace}\usepackage{parskip}\setlength{\parskip}{3pt}
 \pagestyle{empty}
-\color{text}
+\color{body}\fontsize{9.5}{11.5}\selectfont
 
-\newcommand{\secbar}{\tikz[baseline=-0.6ex]\shade[left color=accent,right color=accentb,rounded corners=1pt](0,0) rectangle (0.22,0.07);}
-\titleformat{\section}{\serif\large\bfseries\color{text}}{}{0em}{\secbar\hspace{6pt}}[\vspace{-0.5em}{\color{line}\rule{\textwidth}{0.6pt}}]
-\titlespacing*{\section}{0pt}{0.5em}{0.3em}
-\setlist[itemize]{leftmargin=1.2em,itemsep=0pt,topsep=1pt,parsep=0pt}
+\titleformat{\section}{\color{head}\fontsize{11}{13}\selectfont\bfseries\addfontfeature{LetterSpace=15}}{}{0em}{\MakeUppercase}[\vspace{-0.55em}{\color{head}\rule{\textwidth}{0.72pt}}]
+\titlespacing*{\section}{0pt}{0.7em}{0.45em}
+\setlist[itemize]{leftmargin=1.2em,itemsep=0pt,topsep=1pt,parsep=0pt,label=\textbullet}
 
-\newcommand{\entry}[4]{\noindent\textbf{#1}\hfill {\color{muted}\small #2}\\ {\color{muted}#3 \,·\, #4}}
-\newcommand{\entryb}[2]{\noindent\textbf{#1}\hfill {\color{muted}\small #2}}
+\newcommand{\entry}[4]{\noindent{\color{title}\fontsize{10}{12}\selectfont\bfseries #1}\hfill {\color{dim}\fontsize{9}{11}\selectfont\itshape #2}\\ {\color{sub}\itshape #3 \,·\, #4}}
+\newcommand{\entryb}[2]{\noindent{\color{title}\fontsize{10}{12}\selectfont\bfseries #1}\hfill {\color{dim}\fontsize{9}{11}\selectfont\itshape #2}}
+\newcommand{\adv}[1]{{\color{dim}\fontsize{9}{11}\selectfont #1}}
 
 \begin{document}
 
 \begin{center}
-{\serif\Huge\bfseries QING YAN}\\[3pt]
-{\color{muted}Los Angeles, CA \,·\, \href{mailto:q1ngyan@ucla.edu}{q1ngyan@ucla.edu} \,·\, +1 206-209-6598}\\
-\href{https://qam1ng.github.io}{qam1ng.github.io} \,·\, \href{https://linkedin.com/in/qing-yan}{linkedin.com/in/qing-yan} \,·\, \href{https://keploreai.com}{keploreai.com}
+{\color{name}\fontsize{20}{24}\selectfont\bfseries\addfontfeature{LetterSpace=10} QING YAN}\\[4pt]
+{\color{meta}\fontsize{9}{11}\selectfont Los Angeles, CA \,·\, \href{mailto:q1ngyan@ucla.edu}{q1ngyan@ucla.edu} \,·\, +1 206-209-6598\\
+\href{https://qam1ng.github.io}{qam1ng.github.io} \,·\, \href{https://linkedin.com/in/qing-yan}{linkedin.com/in/qing-yan} \,·\, \href{https://keploreai.com}{keploreai.com}}
 \end{center}
 
 \section{Research Interests}
 Agentic systems that let robots learn, reason, and act autonomously in human environments: LLM-driven task planning and skill composition for long-horizon manipulation, enhancing pre-trained robot policies with vision-language models and reinforcement learning, and human-robot interaction.
 
 \section{Education}
-\entry{University of California, Los Angeles}{Sep 2026 -- Present}{Ph.D. in Electrical \& Computer Engineering}{Los Angeles, CA}\\ {\color{muted}Lin Yang's Research Group, advised by Prof. Lin F. Yang}
+\entry{University of California, Los Angeles}{Sep 2026 -- Present}{Ph.D. in Electrical \& Computer Engineering}{Los Angeles, CA}\\ {\color{sub}\itshape Lin Yang's Research Group, advised by Prof. Lin F. Yang}
 
-\entry{Johns Hopkins University}{Aug 2026}{M.S.E. in Robotics}{Baltimore, MD}\\ {\color{muted}Intuitive Computing Lab (LCSR), advised by Prof. Chien-Ming Huang}
+\entry{Johns Hopkins University}{Aug 2026}{M.S.E. in Robotics}{Baltimore, MD}\\ {\color{sub}\itshape Intuitive Computing Lab (LCSR), advised by Prof. Chien-Ming Huang}
 
-\entry{University of Washington}{Jun 2024}{B.S. in Electrical \& Computer Engineering}{Seattle, WA}\\ {\color{muted}Sensors, Energy \& Automation Laboratory (SEAL), Prof. Alexander V. Mamishev}
+\entry{University of Washington}{Jun 2024}{B.S. in Electrical \& Computer Engineering}{Seattle, WA}\\ {\color{sub}\itshape Sensors, Energy \& Automation Laboratory (SEAL), Prof. Alexander V. Mamishev}
+\begin{itemize}
+\item Cumulative GPA: 3.68 \,·\, Dean's List every quarter
+\item Selected coursework: Signal Processing, Robotics and Control System Analysis, Digital Circuits and Systems, Data Structures and Algorithms, Circuits, Calculus
+\end{itemize}
 
 \section{Publications}
 \begin{itemize}
-\item Gao, M., \textbf{Yan, Q.}, \& Li, X. (2026). GUIDES: Guidance Using Instructor-Distilled Embeddings for Pre-trained Robot Policy Enhancement. \textit{IEEE International Conference on Robotics and Automation (ICRA)}, 2026. \href{https://arxiv.org/abs/2511.03400}{arxiv.org/abs/2511.03400}. Advised by Prof. Chien-Ming Huang (JHU) and Prof. Jiachen Li (UC Riverside).
-\item Yang, W., \& \textbf{Yan, Q.} (2026). Scouting by Reward: VLM-to-IRL-Driven Player Selection for Esports. \textit{MIT Sloan Sports Analytics Conference} (under review). \href{https://arxiv.org/abs/2604.14474}{arxiv.org/abs/2604.14474}. Advised by Prof. Anton Dahbura (JHU).
+\item Gao, M., \textbf{Yan, Q.}, \& Li, X. (2026). GUIDES: Guidance Using Instructor-Distilled Embeddings for Pre-trained Robot Policy Enhancement. \textit{IEEE International Conference on Robotics and Automation (ICRA)}, 2026. \href{https://arxiv.org/abs/2511.03400}{arxiv.org/abs/2511.03400} \adv{Advised by Prof. Chien-Ming Huang (JHU) and Prof. Jiachen Li (UC Riverside).}
+\item Yang, W., \& \textbf{Yan, Q.} (2026). Scouting by Reward: VLM-to-IRL-Driven Player Selection for Esports. \textit{MIT Sloan Sports Analytics Conference} (under review). \href{https://arxiv.org/abs/2604.14474}{arxiv.org/abs/2604.14474} \adv{Advised by Prof. Anton Dahbura (JHU).}
 \end{itemize}
 
 \section{Research Experience}
@@ -69,7 +74,7 @@ Agentic systems that let robots learn, reason, and act autonomously in human env
 \item Engineered an esports scouting system combining VLM and metadata embeddings with inverse reinforcement learning to identify professional players most similar to a target profile; validated with the esports organization Fnatic.
 \end{itemize}
 
-\entry{Sensors, Energy \& Automation Laboratory (SEAL), University of Washington}{Apr 2023 -- Apr 2024}{Embedded Team Associate \,·\, Prof. Alexander V. Mamishev}{Seattle, WA}
+\needspace{5\baselineskip}\entry{Sensors, Energy \& Automation Laboratory (SEAL), University of Washington}{Apr 2023 -- Apr 2024}{Embedded Team Associate \,·\, Prof. Alexander V. Mamishev}{Seattle, WA}
 \begin{itemize}
 \item Designed the signal-receiving module (transformer, preamplifier, DAQ) for the Heimdall ACU antenna system to detect weak electromagnetic interference.
 \item Contributed to PCB simulation and noise-reduction experiments; supported the Fruit Ripeness Sensor, Ammonia Sensor, and Weak Signal Instrument projects.
